@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
-    >
+    android:focusable="true">
 
     <ImageView
         android:id="@+id/ivBookCover"
@@ -27,7 +27,6 @@
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
             android:maxLines="2"
             android:textAppearance="?android:textAppearanceLarge"
             />
@@ -36,7 +35,6 @@
             android:id="@+id/tvAuthor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Author (s)"
             android:textAppearance="?android:textAppearanceMedium"
             />
 
@@ -45,7 +43,6 @@
             android:id="@+id/tvPublisher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Publisher"
             android:textAppearance="?android:textAppearanceMedium"
             />
 

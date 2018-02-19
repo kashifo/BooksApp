@@ -1,9 +1,8 @@
-package cf.kashif.booksapp;
+package cf.kashif.booksapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,8 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
-import cf.kashif.booksapp.pojo.DataModel;
+import cf.kashif.booksapp.R;
+import cf.kashif.booksapp.pojo.Book;
 
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> {
@@ -25,10 +25,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
     //This is a recyclerview adapter to bind data to recyclerview
 
     Context context;
-    public static List<DataModel> booksList = new ArrayList<>();
+    public static List<Book> booksList = new ArrayList<>();
     final String TAG = "MyLog " + this.getClass().getSimpleName();
 
-    public DataAdapter(Context context, List<DataModel> booksList) {
+    public DataAdapter(Context context, List<Book> booksList) {
 
         this.booksList = booksList;
         this.context = context;

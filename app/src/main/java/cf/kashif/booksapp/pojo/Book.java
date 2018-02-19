@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ANDROID on 3/2/2016.
+ * Created by Kashif on 2/20/2018.
  */
-public class DataModel implements Serializable {
+public class Book implements Serializable {
 
     //POJO class (encapsulation) that holds data and processes data to construct pictures url
 

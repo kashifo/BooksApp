@@ -1,4 +1,4 @@
-package cf.kashif.booksapp;
+package cf.kashif.booksapp.activities;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,11 +28,13 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import cf.kashif.booksapp.pojo.DataModel;
+import cf.kashif.booksapp.AppSingleton;
+import cf.kashif.booksapp.Constants;
+import cf.kashif.booksapp.adapters.DataAdapter;
+import cf.kashif.booksapp.R;
+import cf.kashif.booksapp.pojo.Book;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,11 +45,7 @@ public class MainActivity extends AppCompatActivity {
     DataAdapter dataAdapter;
     LinearLayout infoView;
     RelativeLayout rootView;
-
-    //dataList gets all data from gson, then it is split into two sets for two column view
-    List<DataModel> dataList;
-
-    //varying url based on constant flickr api url for searching
+    List<Book> dataList;
     String URL = Constants.URL;
 
     private SearchView searchView;
@@ -212,9 +210,9 @@ public class MainActivity extends AppCompatActivity {
 
                         //gson library for faster and easier serialization
                         Gson gson = new Gson();
-                        Type listType = new TypeToken<List<DataModel>>() {
+                        Type listType = new TypeToken<List<Book>>() {
                         }.getType();
-                        List<DataModel> dataListNew = gson.fromJson(jsonArray.toString(), listType);
+                        List<Book> dataListNew = gson.fromJson(jsonArray.toString(), listType);
 
                         if ( dataListNew!=null && !dataListNew.isEmpty()) {
 
